@@ -1,0 +1,13 @@
+{
+  "personals": [
+    {
+      "fName": "Ömer",
+      "lName": "Ölgün",
+      "phone": "05551852227",
+      "email": "admiqwen@admin.com",
+      "address": "Uğurmumcu Mah. 2299 Sk. No:36 D:4",
+      "description": "",
+      "id": 1
+    }
+  ]
+}

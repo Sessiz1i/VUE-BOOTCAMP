@@ -1,0 +1,190 @@
+{
+  "users": [
+    {
+      "fullName": "Ömer Ölgün",
+      "username": "omer.olgn@gmail.com",
+      "password": "$2a$10$yZMRN9tfzAwzsgdyBvhhgO0.dlF2JrIHB6nnpJqIknkjLeFTcWte.",
+      "likes": [
+        4,
+        6
+      ],
+      "bookmarks": [
+        1,
+        2,
+        6,
+        3
+      ],
+      "id": 1
+    },
+    {
+      "fullName": "Hale Güzelbilen",
+      "username": "hale@gmail.com",
+      "password": "$2a$10$a509q9C4//A3LmRDbShDueSSKr5sZ6vEHd9JDDjIQyP3HXj9.5wg.",
+      "likes": [
+        3
+      ],
+      "bookmarks": [
+        3
+      ],
+      "id": 2
+    },
+    {
+      "fullName": "dsfsdf",
+      "username": "admiqwen@admin.com",
+      "password": "$2a$10$F41ihfqEkg5cNAer/o11Su5fCWJBn22ej9s/o6SiTvyOqtF0SZixa",
+      "likes": [],
+      "bookmarks": [],
+      "id": 3
+    },
+    {
+      "fullName": "Ömer",
+      "username": "admin@admin.com",
+      "password": "$2a$10$6BtOr4IrwVOEmguLggr33OlqeCH9Y5LPNLE2mt52KRSCjQezQ313u",
+      "likes": [],
+      "bookmarks": [],
+      "id": 4
+    },
+    {
+      "fullName": "Haleqwe",
+      "username": "admin@admin.com",
+      "password": "$2a$10$vTce5WnphFArdjbIc8YvjeW7eMyHY.kJ86riv60F3qWicpZg3dmi.",
+      "likes": [],
+      "bookmarks": [],
+      "id": 5
+    },
+    {
+      "fullName": "Haleqwe123",
+      "username": "aadmin@admin.com",
+      "password": "$2a$10$xzOSF4lMEehd0I6.WQRjXur0/HEHbKtqEcICs2/jBxNz4LEBxBFDe",
+      "likes": [],
+      "bookmarks": [],
+      "id": 6
+    },
+    {
+      "fullName": "asda",
+      "username": "asd",
+      "password": "$2a$10$IVxyqY0Lv.pQjTQ/03HCXOrM5eHaWhdjyTx9rvqaghYOX7JVOVU9a",
+      "likes": [],
+      "bookmarks": [],
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Vue.js"
+    },
+    {
+      "id": 2,
+      "name": "React.js"
+    },
+    {
+      "id": 3,
+      "name": "Frontend.js"
+    },
+    {
+      "id": 4,
+      "name": "Backend.js"
+    },
+    {
+      "id": 5,
+      "name": "Node.js"
+    },
+    {
+      "id": 6,
+      "name": "MongoDB"
+    }
+  ],
+  "bookmarks": [
+    {
+      "title": "Vue3",
+      "url": "https://v3.vuejs.org/",
+      "categoryId": 1,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem corporis dignissimos doloribus dolorum, eum eveniet id illum itaque laborum, libero nesciunt nihil possimus quaerat quis quo tempore vel voluptas.",
+      "userId": 1,
+      "created_at": "19.10.2021 07:23:13",
+      "id": 1
+    },
+    {
+      "title": "Vue.js",
+      "url": "https://v3.vuejs.org/",
+      "categoryId": 1,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem corporis dignissimos doloribus dolorum, eum eveniet id illum itaque laborum, libero nesciunt nihil possimus quaerat quis quo tempore vel voluptas.",
+      "userId": 1,
+      "created_at": "19.11.2020 07:23:13",
+      "id": 2
+    },
+    {
+      "title": "Vue 3",
+      "url": "https://v3.vuejs.org/",
+      "categoryId": 2,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem corporis dignissimos doloribus dolorum, eum eveniet id illum itaque laborum, libero nesciunt nihil possimus quaerat quis quo tempore vel voluptas.",
+      "userId": 1,
+      "created_at": "19.11.2021 01:23:13",
+      "id": 3
+    },
+    {
+      "title": "123123",
+      "url": "12313",
+      "categoryId": 2,
+      "description": "123123",
+      "userId": 1,
+      "created_at": "23.11.2021 05:50:16",
+      "id": 4
+    },
+    {
+      "title": "qweqwe",
+      "url": "qweqwe",
+      "categoryId": 3,
+      "description": "qweqwe",
+      "userId": 1,
+      "created_at": "23.11.2021 06:28:04",
+      "id": 5
+    },
+    {
+      "title": "aqasdas",
+      "url": "aasdasd",
+      "categoryId": 3,
+      "description": "asdasd",
+      "userId": 1,
+      "created_at": "29.11.2021 09:47:38",
+      "id": 6
+    },
+    {
+      "title": "qweqwe",
+      "url": "qweqwe",
+      "categoryId": 4,
+      "description": null,
+      "userId": 1,
+      "created_at": "29.11.2021 22:12:53",
+      "id": 7
+    },
+    {
+      "title": "asdasd",
+      "url": "asdasd",
+      "categoryId": 4,
+      "description": "asd",
+      "userId": 1,
+      "created_at": "29.11.2021 22:13:27",
+      "id": 8
+    },
+    {
+      "title": "asdas",
+      "url": "asdasd",
+      "categoryId": 4,
+      "description": "asdasd",
+      "userId": 1,
+      "created_at": "30.11.2021 11:34:11",
+      "id": 9
+    },
+    {
+      "title": "dsdfsd",
+      "url": "sdfsdf",
+      "categoryId": 3,
+      "description": "sdfsdf",
+      "userId": 1,
+      "created_at": "30.11.2021 11:52:31",
+      "id": 10
+    }
+  ]
+}
