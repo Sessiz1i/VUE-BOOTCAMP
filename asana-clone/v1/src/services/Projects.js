@@ -1,8 +1,7 @@
-const Project = require("../models/ProjectModel")
-const insert = async (projectData) => {
-    //return await Project.create(projectData)
-    const newProject = new Project(projectData)
-    return newProject.save()
+const Project = require("../models/Project")
+const insert = async (data) => {
+    const newData = new Project(data)
+    return newData.save()
 }
 const list =()=>{
     return Project.find()
