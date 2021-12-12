@@ -11,7 +11,7 @@ const Schema = new Mongoose.Schema({
     },
     email: {
         type: String,
-        index: true,
+        index:[true, "Önceden kayıt edilmiş veri."],
         unique: [true, "Önceden kayıt edilmiş veri."],
         lowercase: true,
         validate: [isEmail, "Geçerli bir {NAME} giriniz."],
@@ -38,4 +38,4 @@ Schema.post("save", (doc) => {
     })
 
 })
-module.exports = Mongoose.model("user", Schema)
+module.exports = Mongoose.model("User", Schema)

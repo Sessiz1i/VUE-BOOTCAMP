@@ -2,6 +2,7 @@ const express = require("express")
 const helmet = require("helmet")
 require("./config")()
 require("./loaders")()
+require("./scripts/events")()
 const app = express()
 
 /** Routes */
@@ -11,7 +12,7 @@ const {ProjectRoutes,UserRoutes} = require("./routes")
 app.use(express.json())
 app.use(helmet())
 
-/** use Route */
+/** Routes */
 app.use("/projects",    ProjectRoutes)
 app.use("/users",       UserRoutes)
 
