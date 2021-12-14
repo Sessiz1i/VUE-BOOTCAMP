@@ -31,6 +31,11 @@ const loginValidation = Joi.object({
     password:Joi.string()
 
 })
+const changePassword = Joi.object({
+    password:Joi.string()
+        .ruleset.min(6).message("En az {MIN} karakter olmalıdır.")
+        .ruleset.max(25).message("En fazla {MAX} karakter olmalıdır."),
+})
 const resetPassword = Joi.object({
     email:Joi.string()
         .lowercase()
@@ -43,5 +48,6 @@ module.exports = {
     createValidation,
     updateValidation,
     loginValidation,
-    resetPassword
+    resetPassword,
+    changePassword
 }

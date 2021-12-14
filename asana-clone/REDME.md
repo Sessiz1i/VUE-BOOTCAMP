@@ -30,6 +30,10 @@ yarn add http-status
 ```
 yarn add nodemailer
 ```
+### [express-fileupload](https://www.npmjs.com/package/express-fileupload)
+```
+yarn add express-fileupload
+```
 
 
 

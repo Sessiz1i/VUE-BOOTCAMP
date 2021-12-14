@@ -1,5 +1,5 @@
 const Mongoose = require("mongoose");
-const logger = require("../scripts/logger/Project")
+const logger = require("../scripts/logger/Sections")
 const Schema = new Mongoose.Schema({
     name: {
         type: String,
@@ -9,14 +9,22 @@ const Schema = new Mongoose.Schema({
     },
     user: {
         type: Mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "User"
     },
+    project:{
+        type:Mongoose.Schema.Types.ObjectId,
+        ref:"Project"
+    },
+    order:"Number"
 }, {timestamps: true,versionKey: false})
 Schema.post("save", (doc) => {
     logger.log({
         level: "info",
-        message: doc
+        message:{
+            data:Date.now(),
+            ...doc
+        }
     })
 
 })
-module.exports = Mongoose.model("Project", Schema);
+module.exports = Mongoose.model("Sections", Schema);

@@ -3,6 +3,10 @@ const {isEmail} = require("validator");
 const logger = require("../scripts/logger/Project");
 
 const Schema = new Mongoose.Schema({
+    profile_image: {
+        type: String,
+        maxlength: [150, "En fazla {MINLENGTH} karakter olmalıdır."],
+    },
     full_name: {
         type: String,
         required: [true, "{NAME} Bu alan gereklidir."],
@@ -18,10 +22,6 @@ const Schema = new Mongoose.Schema({
         required: [true, "Bu alan gereklidir."],
         minlength: [15, "En az {MINLENGTH} karakter olmalıdır."],
         maxlength: [100, "En fazla {MINLENGTH} karakter olmalıdır."],
-    },
-    profile_image: {
-        type: String,
-        maxlength: [150, "En fazla {MINLENGTH} karakter olmalıdır."],
     },
     password: {
         type: String,

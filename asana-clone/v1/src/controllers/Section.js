@@ -1,25 +1,33 @@
 /** ---------- Models */
-const {insert, list} = require("../services/Projects")
 const httpStatus = require("http-status")
-const Project = require("../models/Project")
+const Section = require("../models/Section")
 
 /** ---------- Project Index */
 const index = (req, res) => {
-    Project.find().populate('user',"full_name email profile_image").then(result => {
-        return res.status(httpStatus.OK).send(result)
-    }).catch(err => {
-        return res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err)
-    })
+    Section.find({project:req.body.project})
+        .populate("user", "full_name email profile_image")
+        .populate('project', "name")
+        .then(result => {
+            return res.status(httpStatus.OK).send(result)
+        })
+        .catch(err => {
+            return res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err)
+        })
 }
-/** ---------- Project Create */
+
+
 const create = (req, res) => {
-    Project.create({...req.body,user:req.user}).then(result => {
-        return res.status(httpStatus.CREATED).send(result)
-    }).catch(err => {
-        return res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err)
-    })
+    Section.create({...req.body, user: req.user, project: req.body.project})
+        .then(createSection => {
+            console.log(createSection)
+            return res.status(httpStatus.CREATED).send(createSection)
+        })
+        .catch(err => {
+            return res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err)
+        })
 }
-/** ---------- Project Update */
+/*
+/!** ---------- Project Update *!/
 const update = async (req, res) => {
     if (!req.params?.id) {
         return res.status(httpStatus.BAD_REQUEST).send({message: "ID Bilgisi eksik."})
@@ -30,7 +38,7 @@ const update = async (req, res) => {
             return res.status(httpStatus.OK).send(updateProject)
         }).catch(err => res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err))
 }
-/** ---------- Project Remove */
+/!** ---------- Project Remove *!/
 const remove = async (req, res) => {
     if (!req.params?.id) {
         return res.status(httpStatus.BAD_REQUEST).send({message: "ID Bilgisi eksik."})
@@ -41,4 +49,6 @@ const remove = async (req, res) => {
             else return res.status(httpStatus.NOT_FOUND).send({message: "Project bulunamadı"})
         }).catch(err => res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err))
 }
-module.exports = {index, create, update,remove}
+*/
+
+module.exports = {create, index}
